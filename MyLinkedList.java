@@ -57,19 +57,25 @@ public class MyLinkedList {
         return tempNode;
     }
 
-    public INode enqueue(INode enque_node) {
+    public INode enqueue(INode top) {
         INode tempNode;
         if (this.head == null){
-            this.head = enque_node;
+            this.head = top;
         }
         if (this.tail==null){
-            this.tail = enque_node;
+            this.tail = top;
         }else {
             tempNode = this.tail;
-            tempNode.setNext(enque_node);
-            this.tail = enque_node;
+            tempNode.setNext(top);
+            this.tail = top;
         }
         return null;
+    }
+
+    public INode dequeue() {
+        INode tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
     }
 
     public void printMyNode(){

@@ -19,4 +19,10 @@ public class MyStack {
         return myLinkedList.enqueue(myenqueueNode);
     }
 
+    public INode deQueue() {
+        return myLinkedList.dequeue();
+    }
+
+
+
 }
